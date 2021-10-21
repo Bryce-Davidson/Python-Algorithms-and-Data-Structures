@@ -4,8 +4,7 @@ n = len(A)
 def insertion_sort(A, n):
     for i in range(1, n):
         j = i
-        # If the previous element to j is bigger than j
-        while j > 0 and A[j] < A[j-1]:
+        while j > 0 and A[j-1] > A[j]:
             t = A[j]
             A[j] = A[j-1]
             A[j-1] = t
