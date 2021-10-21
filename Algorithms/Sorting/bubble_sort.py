@@ -5,9 +5,7 @@ def bubble_sort(A, n):
     for i in range(1, n):
         for j in range(n-i):
             if A[j+1] < A[j]:
-                t = A[j]
-                A[j] = A[j+1]
-                A[j+1] = t
+                A[j], A[j+1] = A[j+1], A[j]
 
 print(A)
 bubble_sort(A, n)

@@ -4,12 +4,10 @@ n = len(A)
 def selection_sort(A, n):
     for i in range(n):
         m = i
-        for j in range(1, n):
+        for j in range(i, n):
             if A[j] < A[m]:
                 m = j
-        t = A[i]
-        A[i] = A[j]
-        A[j] = t
+        A[i], A[m] = A[m], A[i]
 
 
 print(A)
